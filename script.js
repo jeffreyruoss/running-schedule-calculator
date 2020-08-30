@@ -8,7 +8,7 @@ const numWeeksInput = document.getElementById('number-of-weeks');
 
 const tbody = document.getElementById('tbody');
 
-let numWeeks, percentIncrease, startingWeekMiles;
+let startingWeekMiles, percentIncrease, numWeeks ;
 
 const initialValues = () => {
     if (localStorage.getItem('startingWeekMiles') === null) {
@@ -34,12 +34,21 @@ const saveValues = () => {
     localStorage.setItem('numWeeks', numWeeks);
 }
 
-const calculate = (e) => {
+const main = () => {
     numWeeks = numWeeksInput.value;
     percentIncrease = percentIncreaseInput.value;
     startingWeekMiles = startingWeekMilesInput.value;
     saveValues();
     createRows();
+}
+
+const calculate = (i, miles) => {
+    if (i === 0) {
+        miles = Number(startingWeekMiles);
+    } else {
+        miles = miles + (miles * (percentIncrease / 100));
+    }
+    return Math.round(miles * 1e2) / 1e2;
 }
 
 const createRows = () => {
@@ -48,25 +57,18 @@ const createRows = () => {
     for (let i = 0; i < numWeeks; i++ ) {
         const tr = document.createElement('tr');
         tr.classList.add('week');
-
-        if (i === 0) {
-            miles = Number(startingWeekMiles);
-        } else {
-            miles = miles + (miles * (percentIncrease / 100));
-        }
-        miles = Math.round(miles * 1e2) / 1e2;
-
+        miles = calculate(i, miles);
         tr.innerHTML = `<td>${i+1}</td><td>${miles}</td>`;
         tbody.appendChild(tr);
     }
 }
 
 inputs.forEach((input, index) => {
-    input.addEventListener('change', calculate);
-    input.addEventListener('keyup', calculate);
+    input.addEventListener('change', main);
+    input.addEventListener('keyup', main);
 });
 
 window.addEventListener('load', initialValues);
-window.addEventListener('load', calculate);
+window.addEventListener('load', main);
 
 })();
