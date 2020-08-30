@@ -2,18 +2,43 @@
 
 const inputs = document.querySelectorAll('.form-control');
 
-const numWeeksInput = document.getElementById('number-of-weeks');
-const percentIncreaseInput = document.getElementById('percent-increase');
 const startingWeekMilesInput = document.getElementById('starting-week-miles');
+const percentIncreaseInput = document.getElementById('percent-increase');
+const numWeeksInput = document.getElementById('number-of-weeks');
 
 const tbody = document.getElementById('tbody');
 
 let numWeeks, percentIncrease, startingWeekMiles;
 
+const initialValues = () => {
+    if (localStorage.getItem('startingWeekMiles') === null) {
+        startingWeekMilesInput.value = 20;
+    } else {
+        startingWeekMilesInput.value = localStorage.getItem('startingWeekMiles');
+    }
+    if (localStorage.getItem('percentIncrease') === null) {
+        percentIncreaseInput.value = 10;
+    } else {
+        percentIncreaseInput.value = localStorage.getItem('percentIncrease');
+    }
+    if (localStorage.getItem('numWeeks') === null) {
+        numWeeksInput.value = 10;
+    } else {
+        numWeeksInput.value = localStorage.getItem('numWeeks');
+    }
+}
+
+const saveValues = () => {
+    localStorage.setItem('startingWeekMiles', startingWeekMiles);
+    localStorage.setItem('percentIncrease', percentIncrease);
+    localStorage.setItem('numWeeks', numWeeks);
+}
+
 const calculate = (e) => {
     numWeeks = numWeeksInput.value;
     percentIncrease = percentIncreaseInput.value;
     startingWeekMiles = startingWeekMilesInput.value;
+    saveValues();
     createRows();
 }
 
@@ -41,6 +66,7 @@ inputs.forEach((input, index) => {
     input.addEventListener('keyup', calculate);
 });
 
+window.addEventListener('load', initialValues);
 window.addEventListener('load', calculate);
 
 })();
