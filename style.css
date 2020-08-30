@@ -6,22 +6,24 @@ body {
 .page-wrapper.with-navbar>.content-wrapper {
     top: 6rem;
 }
-
 .calculator-row .col-md {
     max-width: 350px;
 }
-
 .form-control {
     margin-bottom: 15px;
     padding: 2.6rem 2rem;
 }
-
 .results-table .week td {
     font-size: 1.4rem;
     padding-top: 0.2rem;
     padding-bottom: 0.2rem;
 }
-
+.light-dark-btn {
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    display: table;
+}
 @media (min-width: 768px) {
     .page-wrapper.with-navbar>.content-wrapper {
         top: 8rem;
