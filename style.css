@@ -7,28 +7,35 @@ body {
     top: 6rem;
 }
 
-@media (min-width: 768px) {
-    .page-wrapper.with-navbar>.content-wrapper {
-        top: 8rem;
-    }
-    h1 {
-        font-size: 2.4rem;
-    }
+.calculator-row .col-md {
+    max-width: 350px;
 }
 
-/**
- * Form
- */
 .form-control {
     margin-bottom: 15px;
     padding: 2.6rem 2rem;
 }
 
-/**
- * Results table
- */
 .results-table .week td {
     font-size: 1.4rem;
     padding-top: 0.2rem;
     padding-bottom: 0.2rem;
+}
+
+@media (min-width: 768px) {
+    .page-wrapper.with-navbar>.content-wrapper {
+        top: 8rem;
+    }
+}
+
+@media (min-width: 1600px) {
+    .calculator-row .col-md {
+        max-width: 370px;
+    }
+}
+
+@media (min-width: 1920px) {
+    .calculator-row .col-md {
+        max-width: 390px;
+    }
 }
