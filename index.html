@@ -14,36 +14,40 @@
   <div class="page-wrapper with-navbar">
     <div class="sticky-alerts"></div>
     <nav class="navbar">
-      <div class="container">
-        <h1>Running schedule calculator</h1>
+      <div class="container-fluid justify-content-center">
+        <h1 class="font-size-20 m-0">Running schedule calculator</h1>
       </div>
     </nav>
     <div class="content-wrapper">
         <div class="container">
             <div class="row calculator-row">
-                <div class="col">
+                <div class="col-md">
+                  <div class="card">
                     <form class="calculator-form">
-                        <div class="form-group">
-                            <label for="starting-week-miles">Starting week miles</label>
-                            <input type="number" class="form-control" id="starting-week-miles" value="10">     
-                            <label for="percent-increase">Percent per week increase</label>
-                            <input type="number" class="form-control" id="percent-increase" value="10">
-                            <label for="number-of-weeks">Number of weeks</label>
-                            <input type="number" class="form-control" id="number-of-weeks" value="20">
-                        </div>
-                      </form>
+                      <div class="form-group">
+                          <label for="starting-week-miles">Starting week miles</label>
+                          <input type="number" class="form-control" id="starting-week-miles" value="10">     
+                          <label for="percent-increase">Percent per week increase</label>
+                          <input type="number" class="form-control" id="percent-increase" value="10">
+                          <label for="number-of-weeks">Number of weeks</label>
+                          <input type="number" class="form-control" id="number-of-weeks" value="20">
+                      </div>
+                    </form>
+                  </div>
                 </div>
-                <div class="col">
+                <div class="col-md">
+                  <div class="card">
                     <table class="table results-table">
-                        <thead>
-                          <tr>
-                            <th>Week #</th>
-                            <th>Miles</th>
-                          </tr>
-                        </thead>
-                        <tbody id="tbody">
-                        </tbody>
-                      </table>
+                      <thead>
+                        <tr>
+                          <th>Week #</th>
+                          <th>Miles</th>
+                        </tr>
+                      </thead>
+                      <tbody id="tbody">
+                      </tbody>
+                    </table>
+                  </div>
                 </div>
             </div>
         </div>

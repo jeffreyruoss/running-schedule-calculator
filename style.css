@@ -6,10 +6,6 @@ body {
 .page-wrapper.with-navbar>.content-wrapper {
     top: 6rem;
 }
-h1 {
-    margin-bottom: 5px;
-    font-size: 2rem;
-}
 
 @media (min-width: 768px) {
     .page-wrapper.with-navbar>.content-wrapper {
@@ -21,47 +17,8 @@ h1 {
 }
 
 /**
- * Columns
- */
-.calculator-row {
-    display: block;
-}
-
-@media (min-width: 768px) {
-    .calculator-row {
-        display: flex;
-        justify-content: center;
-    }
-    .col {
-        flex: 0;
-        min-width: 250px;
-    }
-}
-
-@media (min-width: 1280px) {
-    .container {
-        max-width: 80%;
-    }
-}
-
-/**
- * Card
- */
-.card {
-    /* margin-left: 0; */
-    /* margin-right: 0; */
-    padding-left: 0;
-    padding-right: 0;
-}
-
-/**
  * Form
  */
- .calculator-form {
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 220px;
- }
 .form-control {
     margin-bottom: 15px;
     padding: 2.6rem 2rem;
@@ -70,11 +27,6 @@ h1 {
 /**
  * Results table
  */
-.results-table {
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 200px;
-}
 .results-table .week td {
     font-size: 1.4rem;
     padding-top: 0.2rem;
