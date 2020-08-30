@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+  <meta name="viewport" content="width=device-width" />
+  <title>Running schedule calculator</title>
+  <link href="https://cdn.jsdelivr.net/gh/halfmoonui/halfmoon@1.0.4/css/halfmoon.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="with-custom-webkit-scrollbars with-custom-css-scrollbars" data-dm-shortcut-enabled="true" data-set-preferred-theme-onload="true">
+  <div class="page-wrapper with-navbar">
+    <div class="sticky-alerts"></div>
+    <nav class="navbar">
+      <div class="container">
+        <h1>Running schedule calculator</h1>
+      </div>
+    </nav>
+    <div class="content-wrapper">
+        <div class="container">
+            <div class="row calculator-row">
+                <div class="col">
+                    <form class="calculator-form">
+                        <div class="form-group">
+                            <label for="starting-week-miles">Starting week miles</label>
+                            <input type="number" class="form-control" id="starting-week-miles" value="10">     
+                            <label for="percent-increase">Percent per week increase</label>
+                            <input type="number" class="form-control" id="percent-increase" value="10">
+                            <label for="number-of-weeks">Number of weeks</label>
+                            <input type="number" class="form-control" id="number-of-weeks" value="20">
+                        </div>
+                        <!-- <input class="btn btn-primary" type="submit" value="Submit"> -->
+                      </form>
+                </div>
+                <div class="col">
+                    <table class="table results-table">
+                        <thead>
+                          <tr>
+                            <th>Week #</th>
+                            <th>Miles</th>
+                          </tr>
+                        </thead>
+                        <tbody id="tbody">
+                        </tbody>
+                      </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Content wrapper end -->
+
+  </div>
+  <!-- Page wrapper end -->
+
+  <!-- Halfmoon JS -->
+  <script src="https://cdn.jsdelivr.net/gh/halfmoonui/halfmoon@1.0.4/js/halfmoon.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
