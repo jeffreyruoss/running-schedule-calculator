@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Runner schedule calculator for the week </title>
+</head>
+<body data-set-preferred-theme-onload="true">
+    <div class="page-wrapper with-navbar">
+        <nav class="navbar">
+            <div class="navbar-content">
+                <div class="font-size-17">
+                    Running schedule Calculator for the week
+                </div>
+            </div>
+        </nav>
+        <div class="content-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card font-size-20 text-center">
+                            <span>Total Miles:</span>
+                            <strong id="total-miles" class="text-success"></strong>
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card">
+                            <div class="table-responsive">
+                                <table class="table week-table table-no-outer-padding">
+                                    <thead>
+                                        <tr class="text-uppercase">
+                                            <th>Day</th>
+                                            <th>Miles</th>
+                                            <th>Duration</th>
+                                            <th>Pace</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Sunday</td>
+                                            <td><input type="number" class="form-control miles sunday-miles" id="sunday-miles"></td>
+                                            <td><input type="number" class="form-control duration"></td>
+                                            <td><input type="number" class="form-control pace"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Monday</td>
+                                            <td><input type="number" class="form-control miles" id="monday-miles"></td>
+                                            <td><input type="number" class="form-control duration"></td>
+                                            <td><input type="number" class="form-control pace"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Tuesday</td>
+                                            <td><input type="number" class="form-control miles" id="tuesday-miles"></td>
+                                            <td><input type="number" class="form-control duration"></td>
+                                            <td><input type="number" class="form-control pace"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Wednesday</td>
+                                            <td><input type="number" class="form-control miles" id="wednesday-miles"></td>
+                                            <td><input type="number" class="form-control duration"></td>
+                                            <td><input type="number" class="form-control pace"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Thursday</td>
+                                            <td><input type="number" class="form-control miles" id="thursday-miles"></td>
+                                            <td><input type="number" class="form-control duration"></td>
+                                            <td><input type="number" class="form-control pace"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Friday</td>
+                                            <td><input type="number" class="form-control miles" id="friday-miles"></td>
+                                            <td><input type="number" class="form-control duration"></td>
+                                            <td><input type="number" class="form-control pace"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Saturday</td>
+                                            <td><input type="number" class="form-control miles" id="saturday-miles"></td>
+                                            <td><input type="number" class="form-control duration"></td>
+                                            <td><input type="number" class="form-control pace"></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <div class="content text-center">
+                            <button class="btn" type="button" onclick="lightDark()">Light/Dark</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col text-center">
+                      <a href="/index.html" class="text-muted">Go to the week by week calculator</a>
+                    </div>
+                  </div>
+            </div>
+        </div>
+    </div>
+    
+
+
+    <link href="https://cdn.jsdelivr.net/gh/halfmoonui/halfmoon@1.0.4/css/halfmoon.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/gh/halfmoonui/halfmoon@1.0.4/js/halfmoon.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
